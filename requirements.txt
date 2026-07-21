@@ -1,0 +1,88 @@
+# ==========================
+# Core Libraries
+# ==========================
+numpy
+pandas
+scipy
+
+# ==========================
+# Deep Learning
+# ==========================
+tensorflow
+keras
+
+# ==========================
+# Computer Vision
+# ==========================
+opencv-python
+Pillow
+albumentations
+imageio
+
+# ==========================
+# Data Visualization
+# ==========================
+matplotlib
+plotly
+
+# ==========================
+# Machine Learning
+# ==========================
+scikit-learn
+
+# ==========================
+# Configuration
+# ==========================
+PyYAML
+python-box
+ensure
+
+# ==========================
+# Utilities
+# ==========================
+joblib
+tqdm
+requests
+gdown
+
+# ==========================
+# Hugging Face
+# ==========================
+huggingface_hub
+hf_transfer
+
+# ==========================
+# Experiment Tracking
+# ==========================
+mlflow
+
+# ==========================
+# Deployment
+# ==========================
+streamlit
+gunicorn
+
+# ==========================
+# Environment Variables
+# ==========================
+python-dotenv
+
+# ==========================
+# Testing
+# ==========================
+pytest
+pytest-cov
+
+# ==========================
+# Development Tools
+# ==========================
+black
+flake8
+isort
+
+# ==========================
+# Jupyter
+# ==========================
+notebook
+jupyterlab
+ipykernel
