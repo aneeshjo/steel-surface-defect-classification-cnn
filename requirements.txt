@@ -1,88 +1,90 @@
 # ==========================
 # Core Libraries
 # ==========================
-numpy
-pandas
-scipy
+numpy==2.5.1
+pandas==2.3.3
+scipy==1.18.0
 
 # ==========================
 # Deep Learning
 # ==========================
-tensorflow
-keras
+tensorflow==2.21.0
+keras==3.15.0
 
 # ==========================
 # Computer Vision
 # ==========================
-opencv-python
-Pillow
-albumentations
-imageio
+opencv-python==5.0.0.93
+Pillow==12.3.0
+albumentations==2.0.8
+imageio==2.37.4
 
 # ==========================
 # Data Visualization
 # ==========================
-matplotlib
-plotly
+matplotlib==3.11.1
+plotly==6.9.0
 
 # ==========================
 # Machine Learning
 # ==========================
-scikit-learn
+scikit-learn==1.9.0
 
 # ==========================
 # Configuration
 # ==========================
-PyYAML
-python-box
-ensure
+PyYAML==6.0.3
+python-box==7.4.1
+ensure==1.0.4
 
 # ==========================
 # Utilities
 # ==========================
-joblib
-tqdm
-requests
-gdown
+joblib==1.5.3
+tqdm==4.69.0
+requests==2.34.2
+gdown==6.1.0
 
 # ==========================
 # Hugging Face
 # ==========================
-huggingface_hub
-hf_transfer
+huggingface_hub==1.24.0
+hf_transfer==0.1.9
 
 # ==========================
 # Experiment Tracking
 # ==========================
-mlflow
+mlflow==3.14.0
 
 # ==========================
 # Deployment
 # ==========================
-streamlit
-gunicorn
+streamlit==1.59.2
+gunicorn==26.0.0
 
 # ==========================
 # Environment Variables
 # ==========================
-python-dotenv
+python-dotenv==1.2.2
 
 # ==========================
 # Testing
 # ==========================
-pytest
-pytest-cov
+pytest==9.1.1
+pytest-cov==7.1.0
 
 # ==========================
 # Development Tools
 # ==========================
-black
-flake8
-isort
+black==26.5.1
+flake8==7.3.0
+isort==8.0.1
 
 # ==========================
 # Jupyter
 # ==========================
-notebook
-jupyterlab
-ipykernel
+notebook==7.6.0
+jupyterlab==4.6.1
+ipykernel==7.3.0
+
+-e .
