@@ -1,0 +1,13 @@
+EXPECTED_CLASSES:
+  - crazing
+  - inclusion
+  - patches
+  - pitted_surface
+  - rolled_in_scale
+  - scratches
+
+ALLOWED_IMAGE_EXTENSIONS:
+  - .jpg
+  - .jpeg
+  - .png
+  - .bmp
