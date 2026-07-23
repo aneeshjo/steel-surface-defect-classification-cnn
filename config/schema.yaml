@@ -1,13 +1,35 @@
+DATASET_STRUCTURE:
+  ROOT_DIR: NEU-DET
+
+  TRAIN_DIR: train
+
+  VALIDATION_DIR: validation
+
+  IMAGES_DIR: images
+
+  ANNOTATIONS_DIR: annotations
+
 EXPECTED_CLASSES:
   - crazing
+
   - inclusion
+
   - patches
+
   - pitted_surface
-  - rolled_in_scale
+
+  - rolled-in_scale
+
   - scratches
 
 ALLOWED_IMAGE_EXTENSIONS:
   - .jpg
+
   - .jpeg
+
   - .png
+
   - .bmp
+
+ALLOWED_ANNOTATION_EXTENSIONS:
+  - .xml
