@@ -1,5 +1,3 @@
-# Computer Vision Defect Detection
+End-to-End Steel Surface Defect Classification using CNN
 
-Production-ready Deep Learning project for industrial surface defect detection using TensorFlow.
-
-Work in Progress.
+Production-ready Deep Learning Image Classification Pipeline built with TensorFlow, Modular Python Architecture, and MLOps Best Practices.
