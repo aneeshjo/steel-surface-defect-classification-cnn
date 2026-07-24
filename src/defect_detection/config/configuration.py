@@ -8,7 +8,8 @@ from defect_detection.constants import (
 from defect_detection.entity.config_entity import (
     DataIngestionConfig,
     DatasetStructureConfig,
-    DataValidationConfig
+    DataValidationConfig,
+    DataTransformationConfig
 )
 from defect_detection.utils.common import (
     read_yaml,
@@ -62,3 +63,25 @@ class ConfigurationManager:
                 schema.ALLOWED_ANNOTATION_EXTENSIONS
             )
         )
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+
+        config = self._config.data_transformation
+        params = self._params
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=Path(config.root_dir),
+
+            train_data_path=Path(config.train_data_path),
+            validation_data_path=Path(config.validation_data_path),
+
+            image_size=tuple(params.IMAGE_SIZE),
+            batch_size=params.BATCH_SIZE,
+            seed=params.SEED,
+
+            train_shuffle=params.TRAIN_SHUFFLE,
+            validation_shuffle=params.VALIDATION_SHUFFLE,
+        )
+
+        return data_transformation_config

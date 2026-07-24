@@ -60,3 +60,17 @@ class DataValidationConfig:
     expected_classes: list[str]
     allowed_image_extensions: list[str]
     allowed_annotation_extensions: list[str]
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+
+    train_data_path: Path
+    validation_data_path: Path
+
+    image_size: tuple
+    batch_size: int
+    seed: int
+
+    train_shuffle: bool
+    validation_shuffle: bool
