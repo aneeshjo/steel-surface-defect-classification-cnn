@@ -36,11 +36,13 @@ class DataTransformation:
         logger.info("Datasets created successfully.")
 
         logger.info(f"Classes found : {train_dataset.class_names}")
+        class_names = train_dataset.class_names
 
         artifacts = DataTransformationArtifacts(
             train_dataset=train_dataset,
             validation_dataset=validation_dataset,
-            class_names=train_dataset.class_names,
+            class_names=class_names,
+            num_classes=len(class_names),
         )
 
         return artifacts

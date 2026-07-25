@@ -7,3 +7,4 @@ class DataTransformationArtifacts:
     train_dataset: tf.data.Dataset
     validation_dataset: tf.data.Dataset
     class_names: list[str]
+    num_classes:int

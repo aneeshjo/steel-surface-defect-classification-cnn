@@ -3,7 +3,8 @@ from pathlib import Path
 
 from defect_detection.constants import (
     CONFIG_FILE_PATH,
-    SCHEMA_FILE_PATH
+    SCHEMA_FILE_PATH,
+    PARAMS_FILE_PATH
 )
 from defect_detection.entity.config_entity import (
     DataIngestionConfig,
@@ -18,9 +19,10 @@ from defect_detection.utils.common import (
 
 
 class ConfigurationManager:
-    def __init__(self,config_filepath=CONFIG_FILE_PATH,schema_filepath=SCHEMA_FILE_PATH):
+    def __init__(self,config_filepath=CONFIG_FILE_PATH,schema_filepath=SCHEMA_FILE_PATH,params_filepath=PARAMS_FILE_PATH):
         self._config=read_yaml(config_filepath)
         self._schema=read_yaml(schema_filepath)
+        self._params=read_yaml(params_filepath)
         create_directories([Path(self._config.artifacts_root)])
 
     
@@ -68,7 +70,7 @@ class ConfigurationManager:
         config = self._config.data_transformation
         params = self._params
 
-        create_directories([config.root_dir])
+        create_directories([Path(config.root_dir)])
 
         data_transformation_config = DataTransformationConfig(
             root_dir=Path(config.root_dir),

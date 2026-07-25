@@ -1,0 +1,1 @@
+from defect_detection.logger import logger

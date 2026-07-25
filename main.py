@@ -10,7 +10,7 @@ from defect_detection.pipeline.stage_02_data_validation import (
 from defect_detection.pipeline.stage_03_data_transformation import (
     DataTransformationTrainingPipeline,
 )
-
+import sys
 
 if __name__ == "__main__":
 
@@ -24,4 +24,4 @@ if __name__ == "__main__":
 
     except Exception as e:
         logger.exception(e)
-        raise CustomException(e)
+        raise CustomException(e,sys)

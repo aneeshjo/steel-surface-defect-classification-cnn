@@ -25,6 +25,6 @@ class DataIngestionTrainingPipeline:
 
         data_ingestion.download_file()
 
-        data_ingestion.extract_zip_file()
+        data_ingestion.extract_zipfile()
 
         logger.info(f">>>>>> {STAGE_NAME} Completed <<<<<<")
