@@ -96,7 +96,6 @@ class ConfigurationManager:
 
             config = self._config.prepare_base_model
             params = self._params
-            schema = self._schema
 
             create_directories([Path(config.root_dir)])
 
@@ -105,7 +104,6 @@ class ConfigurationManager:
                 model_path=config.model_path,
 
                 image_size=tuple(params.IMAGE_SIZE),
-                num_classes=schema.NUM_CLASSES,
 
                 learning_rate=params.LEARNING_RATE,
                 dropout_rate=params.DROPOUT_RATE

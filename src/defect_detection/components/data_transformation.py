@@ -18,7 +18,7 @@ class DataTransformation:
 
         train_dataset = tf.keras.utils.image_dataset_from_directory(
             directory=self.config.train_data_path,
-            image_size=self.config.image_size,
+            image_size=self.config.image_size[:2],
             batch_size=self.config.batch_size,
             shuffle=self.config.train_shuffle,
             seed=self.config.seed,
@@ -28,7 +28,7 @@ class DataTransformation:
 
         validation_dataset = tf.keras.utils.image_dataset_from_directory(
             directory=self.config.validation_data_path,
-            image_size=self.config.image_size,
+            image_size=self.config.image_size[:2],
             batch_size=self.config.batch_size,
             shuffle=self.config.validation_shuffle,
         )

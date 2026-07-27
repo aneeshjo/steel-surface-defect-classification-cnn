@@ -10,6 +10,10 @@ from defect_detection.pipeline.stage_02_data_validation import (
 from defect_detection.pipeline.stage_03_data_transformation import (
     DataTransformationTrainingPipeline,
 )
+
+from defect_detection.pipeline.stage_04_prepare_base_model import (
+    PrepareBaseModelPipeline
+)
 import sys
 
 if __name__ == "__main__":
@@ -21,6 +25,8 @@ if __name__ == "__main__":
         DataValidationTrainingPipeline().main()
 
         DataTransformationTrainingPipeline().main()
+
+        PrepareBaseModelPipeline().main()
 
     except Exception as e:
         logger.exception(e)

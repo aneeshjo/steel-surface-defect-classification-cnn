@@ -81,7 +81,6 @@ class PrepareBaseModelConfig:
     model_path: Path
 
     image_size: tuple
-    num_classes: int
 
     learning_rate: float
     dropout_rate: float
