@@ -10,7 +10,8 @@ from defect_detection.entity.config_entity import (
     DataIngestionConfig,
     DatasetStructureConfig,
     DataValidationConfig,
-    DataTransformationConfig
+    DataTransformationConfig,
+    PrepareBaseModelConfig
 )
 from defect_detection.utils.common import (
     read_yaml,
@@ -87,3 +88,27 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+
+    def get_prepare_base_model_config(self) -> PrepareBaseModelConfig:
+            """
+            Returns configuration required for preparing the CNN base model.
+            """
+
+            config = self._config.prepare_base_model
+            params = self._params
+            schema = self._schema
+
+            create_directories([Path(config.root_dir)])
+
+            prepare_base_model_config = PrepareBaseModelConfig(
+                root_dir=config.root_dir,
+                model_path=config.model_path,
+
+                image_size=tuple(params.IMAGE_SIZE),
+                num_classes=schema.NUM_CLASSES,
+
+                learning_rate=params.LEARNING_RATE,
+                dropout_rate=params.DROPOUT_RATE
+            )
+
+            return prepare_base_model_config

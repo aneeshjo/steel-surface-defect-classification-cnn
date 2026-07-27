@@ -13,7 +13,9 @@ data_validation:
 
 data_transformation:
   root_dir: artifacts/data_transformation
-
   train_data_path: artifacts/data_ingestion/data/NEU-DET/train/images
-
   validation_data_path: artifacts/data_ingestion/data/NEU-DET/validation/images
+
+prepare_base_model:
+  root_dir: artifacts/prepare_base_model
+  model_path: artifacts/prepare_base_model/model.keras

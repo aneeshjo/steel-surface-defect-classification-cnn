@@ -74,3 +74,14 @@ class DataTransformationConfig:
 
     train_shuffle: bool
     validation_shuffle: bool
+
+@dataclass(frozen=True)
+class PrepareBaseModelConfig:
+    root_dir: Path
+    model_path: Path
+
+    image_size: tuple
+    num_classes: int
+
+    learning_rate: float
+    dropout_rate: float
