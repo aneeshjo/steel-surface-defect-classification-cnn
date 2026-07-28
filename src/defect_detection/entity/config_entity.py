@@ -84,3 +84,14 @@ class PrepareBaseModelConfig:
 
     learning_rate: float
     dropout_rate: float
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+
+    root_dir: Path
+
+    base_model_path: Path
+
+    trained_model_path: Path
+
+    epochs: int

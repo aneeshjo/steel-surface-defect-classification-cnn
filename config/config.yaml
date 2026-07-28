@@ -19,3 +19,7 @@ data_transformation:
 prepare_base_model:
   root_dir: artifacts/prepare_base_model
   model_path: artifacts/prepare_base_model/model.keras
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  trained_model_path: artifacts/model_trainer/trained_model.keras

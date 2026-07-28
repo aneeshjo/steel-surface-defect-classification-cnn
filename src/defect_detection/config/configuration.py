@@ -11,7 +11,8 @@ from defect_detection.entity.config_entity import (
     DatasetStructureConfig,
     DataValidationConfig,
     DataTransformationConfig,
-    PrepareBaseModelConfig
+    PrepareBaseModelConfig,
+    ModelTrainerConfig
 )
 from defect_detection.utils.common import (
     read_yaml,
@@ -110,3 +111,23 @@ class ConfigurationManager:
             )
 
             return prepare_base_model_config
+
+    def get_model_trainer_config(
+    self
+    ) -> ModelTrainerConfig:
+
+        config = self._config.model_trainer
+        params = self._params
+
+        create_directories(
+            [Path(config.root_dir)]
+        )
+
+        return ModelTrainerConfig(
+            root_dir=config.root_dir,
+            base_model_path=self._config.prepare_base_model.model_path,
+            trained_model_path=config.trained_model_path,
+            epochs=params.EPOCHS
+        )
+
+    
