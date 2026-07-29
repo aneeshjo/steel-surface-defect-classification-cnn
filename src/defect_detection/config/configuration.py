@@ -12,7 +12,9 @@ from defect_detection.entity.config_entity import (
     DataValidationConfig,
     DataTransformationConfig,
     PrepareBaseModelConfig,
-    ModelTrainerConfig
+    ModelTrainerConfig,
+    ModelEvaluationConfig,
+    PredictionConfig
 )
 from defect_detection.utils.common import (
     read_yaml,
@@ -130,4 +132,30 @@ class ConfigurationManager:
             epochs=params.EPOCHS
         )
 
-    
+    def get_model_evaluation_config(
+        self
+    ) -> ModelEvaluationConfig:
+
+        config = self._config.model_evaluation
+
+        create_directories(
+            [Path(config.root_dir)]
+        )
+
+        return ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            trained_model_path=self._config.model_trainer.trained_model_path,
+            metrics_file_path=config.metrics_file_path
+        )
+
+    def get_prediction_config(
+        self
+    ) -> PredictionConfig:
+
+        return PredictionConfig(
+            trained_model_path=self._config.model_trainer.trained_model_path,
+            image_size=self._params.IMAGE_SIZE,
+            class_names=self._schema.EXPECTED_CLASSES
+        )
+
+            

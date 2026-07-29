@@ -32,6 +32,11 @@ class DataTransformation:
             batch_size=self.config.batch_size,
             shuffle=self.config.validation_shuffle,
         )
+        print("\nTrain Class Names:")
+        print(train_dataset.class_names)
+
+        print("\nValidation Class Names:")
+        print(validation_dataset.class_names)
 
         logger.info("Datasets created successfully.")
 

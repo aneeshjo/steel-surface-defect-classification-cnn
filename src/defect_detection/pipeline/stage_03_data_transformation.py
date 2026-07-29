@@ -38,3 +38,6 @@ class DataTransformationTrainingPipeline:
         logger.info(f">>>>>> {STAGE_NAME} Completed <<<<<<")
 
         return artifacts
+if __name__ == "__main__":
+    pipeline = DataTransformationTrainingPipeline()
+    pipeline.main()

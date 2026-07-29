@@ -95,3 +95,15 @@ class ModelTrainerConfig:
     trained_model_path: Path
 
     epochs: int
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    trained_model_path: Path
+    metrics_file_path: Path
+
+@dataclass(frozen=True)
+class PredictionConfig:
+    trained_model_path: Path
+    image_size: list
+    class_names: list
